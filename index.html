@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isekai Verse Fiction - Beranda</title>
+    <style>
+        body {
+            margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white; text-align: center;
+            /* PENGATURAN BACKGROUND CUSTOM */
+            background-image: url('placeholder/background.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            /* Latar belakang bernuansa abu-abu gelap */
+            background-color: #121212; 
+            padding-bottom: 80px; 
+        }
+
+        /* Overlay gelap agar teks tetap mudah dibaca di atas gambar */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7); 
+            z-index: -1;
+        }
+
+        /* Navigasi dengan warna abu-abu gelap */
+        nav { background-color: rgba(30, 30, 30, 0.9); padding: 20px; font-size: 20px; font-weight: bold; letter-spacing: 2px;}
+        
+        .header-title { margin: 40px 0; position: relative; }
+        /* Warna judul diubah ke merah gelap */
+        .header-title h1 { font-size: 36px; margin-bottom: 5px; color: #b71c1c; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .header-title p { color: #d5dbdb; font-size: 18px; }
+
+        .character-grid {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; padding: 20px; max-width: 1100px; margin: auto;
+            position: relative;
+        }
+
+        .char-card {
+            /* Background kartu abu-abu menengah-gelap */
+            background-color: rgba(45, 45, 45, 0.85); 
+            /* Border merah gelap */
+            border: 2px solid #8b0000;
+            border-radius: 10px;
+            width: 180px;
+            padding: 15px;
+            text-decoration: none; 
+            color: white;
+            transition: 0.3s;
+            backdrop-filter: blur(5px); 
+        }
+
+        .char-card:hover {
+            /* Efek hover menjadi merah gelap */
+            background-color: #8b0000;
+            transform: translateY(-5px); 
+        }
+
+        .char-card img { width: 100%; border-radius: 5px; margin-bottom: 10px; filter: grayscale(50%); }
+        .char-card:hover img { filter: grayscale(0%); }
+        .char-card h3 { margin: 0 0 5px 0; font-size: 18px; }
+        .char-card p { margin: 0; font-size: 13px; color: #bdc3c7; }
+
+        /* --- STYLING PENCARIAN MELAYANG --- */
+        .search-container {
+            position: fixed;
+            bottom: 25px; 
+            left: 50%;
+            transform: translateX(-50%); 
+            width: 90%;
+            max-width: 400px;
+            z-index: 100;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 25px;
+            border-radius: 30px;
+            /* Border merah gelap */
+            border: 2px solid #8b0000;
+            /* Background pencarian abu-abu sangat gelap */
+            background-color: rgba(25, 25, 25, 0.85);
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            outline: none;
+            box-sizing: border-box;
+            backdrop-filter: blur(10px); 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            transition: 0.3s;
+        }
+
+        .search-input:focus {
+            /* Saat di-klik, border menjadi merah yang sedikit lebih terang */
+            border-color: #b71c1c;
+            background-color: rgba(35, 35, 35, 0.95);
+            /* Glow bayangan disesuaikan ke merah */
+            box-shadow: 0 10px 40px rgba(183, 28, 28, 0.4);
+        }
+
+        .search-input::placeholder {
+            color: #a2a9b1;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>ISEKAI VERSE FICTION</nav>
+
+    <div class="header-title">
+        <h1>ISEKAI VERSE CHARACTER'S</h1>
+        <p>Pilih karakter untuk dilihat!</p>
+    </div>
+
+    <div class="character-grid" id="charGrid">
+        
+        <a href="Arkha.html" class="char-card">
+            <img src="placeholder/arkha_icon.png" alt="Arkha">
+            <h3>Arkha</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="Zamy.html" class="char-card">
+            <img src="placeholder/zamy_icon.png" alt="Zamy">
+            <h3>Zamy</h3>
+            <p>From Genom</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/rayas_icon.png" alt="Rayas">
+            <h3>Rayas</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/faedil_icon.png" alt="Faedil">
+            <h3>Faedil</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/xio_icon.png" alt="Xio">
+            <h3>Xio</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="Xihoose.html" class="char-card">
+            <img src="placeholder/xihoose_icon.png" alt="Xihoose">
+            <h3>Xihoose</h3>
+            <p>From Genom</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/niff_icon.png" alt="Niff">
+            <h3>Niff</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/nay_icon.png" alt="Nay">
+            <h3>Nay</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/nana_icon.png" alt="Nana">
+            <h3>Nana</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="#" class="char-card">
+            <img src="placeholder/kila_icon.png" alt="Kila">
+            <h3>Kila</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+        <a href="Zuya.html" class="char-card">
+            <img src="placeholder/zuya_icon.png" alt="Zuya">
+            <h3>Zuya</h3>
+            <p>From Rule Breaker</p>
+        </a>
+
+    </div>
+
+    <!-- KOLOM PENCARIAN MELAYANG -->
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Cari nama atau asal (Cth: Rule Breaker)...">
+    </div>
+
+    <!-- SCRIPT GABUNGAN: PENGURUTAN & PENCARIAN -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const grid = document.getElementById('charGrid');
+            const cards = Array.from(grid.querySelectorAll('.char-card'));
+            const searchInput = document.getElementById('searchInput');
+
+            // 1. Proses mengurutkan kartu dari A - Z
+            cards.sort((a, b) => {
+                const nameA = a.querySelector('h3').innerText.toUpperCase();
+                const nameB = b.querySelector('h3').innerText.toUpperCase();
+                return nameA.localeCompare(nameB);
+            });
+
+            // Memasukkan kartu yang sudah berurutan kembali ke dalam grid
+            grid.innerHTML = '';
+            cards.forEach(card => grid.appendChild(card));
+
+            // 2. Proses Pencarian (Real-time Filtering)
+            searchInput.addEventListener('input', function() {
+                const filterText = searchInput.value.toLowerCase();
+
+                // Lakukan pengecekan pada setiap kartu
+                cards.forEach(card => {
+                    const charName = card.querySelector('h3').innerText.toLowerCase();
+                    const charDesc = card.querySelector('p').innerText.toLowerCase();
+
+                    // Jika nama atau deskripsi mengandung kata yang dicari, tampilkan kartu
+                    if (charName.includes(filterText) || charDesc.includes(filterText)) {
+                        card.style.display = ""; // Munculkan
+                    } else {
+                        card.style.display = "none"; // Sembunyikan
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
