@@ -119,22 +119,22 @@
 
     <div class="character-grid" id="charGrid">
         
-        <a href="Arkha.html" class="char-card">
-            <img src="placeholder/arkha_icon.png" alt="Arkha">
-            <h3>Arkha</h3>
-            <p>From Rule Breaker</p>
+        <a href="abyl.html" class="char-card">
+            <img src="placeholder/abyl_icon_icon.png" alt="Abyl">
+            <h3>Abyl</h3>
+            <p>Side Character</p>
         </a>
 
         <a href="Zamy.html" class="char-card">
             <img src="placeholder/zamy_icon.png" alt="Zamy">
             <h3>Zamy</h3>
-            <p>From Genom</p>
+            <p>Main Character</p>
         </a>
 
-        <a href="#" class="char-card">
+        <a href="rayas.html" class="char-card">
             <img src="placeholder/rayas_icon.png" alt="Rayas">
             <h3>Rayas</h3>
-            <p>From Rule Breaker</p>
+            <p>Side Character</p>
         </a>
 
         <a href="#" class="char-card">
@@ -152,7 +152,7 @@
         <a href="Xihoose.html" class="char-card">
             <img src="placeholder/xihoose_icon.png" alt="Xihoose">
             <h3>Xihoose</h3>
-            <p>From Genom</p>
+            <p>Side Character</p>
         </a>
 
         <a href="#" class="char-card">
@@ -179,10 +179,10 @@
             <p>From Rule Breaker</p>
         </a>
 
-        <a href="Zuya.html" class="char-card">
+        <a href="zuya.html" class="char-card">
             <img src="placeholder/zuya_icon.png" alt="Zuya">
             <h3>Zuya</h3>
-            <p>From Rule Breaker</p>
+            <p>Side Character</p>
         </a>
 
     </div>
@@ -228,6 +228,20 @@
                 });
             });
         });
+    </script>
+
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(registration => {
+          console.log('Service Worker berhasil didaftarkan');
+        })
+        .catch(error => {
+          console.log('Pendaftaran Service Worker gagal:', error);
+        });
+    });
+  }
     </script>
 
 </body>
