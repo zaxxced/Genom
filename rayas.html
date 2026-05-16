@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntake Rayas - Profile</title>
+    <style>
+        /* Mengatur dasar halaman */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: white;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* --- TRIK BACKGROUND BLUR --- */
+        /* 1. Latar Belakang Gambar yang Diblur */
+        .bg-blur {
+            position: fixed;
+            top: -5%; 
+            left: -5%;
+            width: 110%;
+            height: 110%;
+            background-image: url('Image/rayas.png'); 
+            background-size: cover;
+            background-position: center;
+            filter: blur(50px); 
+            z-index: -2; 
+        }
+
+        /* 2. Lapisan Overlay Gelap agar teks tetap mudah dibaca */
+        .bg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Diubah menjadi abu-abu sangat gelap / kehitaman */
+            background-color: rgba(18, 18, 18, 0.25); 
+            z-index: -1;
+        }
+        /* --------------------------- */
+
+        /* Navigasi atas (Abu-abu Gelap dengan aksen Merah) */
+        nav {
+            background-color: rgba(30, 30, 30, 0.9); /* Abu-abu gelap */
+            border-bottom: 2px solid #8b0000; /* Garis bawah merah gelap */
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            font-size: 18px;
+            font-weight: 500;
+            backdrop-filter: blur(10px); 
+        }
+
+        nav span {
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        nav span:hover {
+            color: #b71c1c; /* Efek hover merah */
+        }
+
+        /* Container utama */
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            position: relative; 
+            z-index: 1;
+        }
+
+        /* Frame Foto Karakter */
+        .image-card {
+            position: relative;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            /* Border diubah menjadi merah gelap */
+            border: 2px solid #8b0000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .image-card img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Overlay Nama di dalam Foto (Jika digunakan) */
+        .name-overlay {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(30, 30, 30, 0.9);
+            color: #b71c1c;
+            border: 1px solid #8b0000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            line-height: 1.2;
+        }
+
+        .name-overlay .main-name {
+            font-size: 24px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .name-overlay .sub-name {
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* Bagian Teks Biodata */
+        .info-section {
+            margin-top: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            /* Latar belakang kotak info abu-abu gelap */
+            background: rgba(35, 35, 35, 0.85); 
+            padding: 20px;
+            border-radius: 15px;
+            /* Border merah gelap */
+            border: 2px solid #8b0000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .first-appear {
+            /* Teks highlight diubah ke merah terang */
+            color: #b71c1c;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .info-row {
+            margin-bottom: 8px;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .value {
+            /* Warna nilai diubah ke abu-abu terang netral */
+            color: #d5dbdb;
+        }
+
+        .section-break {
+            margin-top: 20px;
+            padding-top: 15px;
+            /* Garis pemisah diubah ke merah gelap transparan */
+            border-top: 1px solid rgba(139, 0, 0, 0.5); 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menambahkan Div untuk Background Blur -->
+    <div class="bg-blur"></div>
+    <div class="bg-overlay"></div>
+
+    <nav>
+         <a href="index.html" style="text-decoration: none; color: inherit;">
+            <span>Character List</span>
+         </a>
+    </nav>
+
+    <div class="container">
+        
+        <div class="image-card">
+            <img src="Image/rayas.png" alt="Syntake Rayas">
+        </div>
+
+        <div class="info-section">
+            <span class="first-appear">First Appear: Episode 5</span>
+
+            <div class="info-row"><span class="label">Name:</span> <span class="value">Syntake Rayas</span></div>
+            <div class="info-row"><span class="label">Age:</span> <span class="value">41</span></div>
+            <div class="info-row"><span class="label">Height:</span> <span class="value">183</span></div>
+            <div class="info-row"><span class="label">Gender:</span> <span class="value">Male</span></div>
+
+            <div class="section-break">
+                <div class="info-row"><span class="label">Role:</span> <span class="value">Side Character</span></div>
+            </div>
+
+            <div class="section-break">
+                <div class="info-row">
+                    <span class="label">Characteristics:</span> 
+                    <span class="value">Elder guy with big physics</span>
+                </div>
+            </div>
+
+            <div class="section-break">
+                <div class="info-row"><span class="label">Likes:</span> <span class="value">Collecting Gun.</span></div>
+                <div class="info-row"><span class="label">Dislikes:</span> <span class="value">Genom.</span></div>
+            </div>
+
+            <div class="section-break">
+                <div class="info-row"><span class="label">Power:</span> <span class="value">Superhuman.</span></div>
+            </div>
+            
+            <div class="section-break">
+                <div class="info-row">
+                    <span class="label" style="display: block; margin-bottom: 5px;">Summary</span> 
+                    <span class="value" style="display: block; line-height: 1.5;">Penjahat tobat yang membantu tim Zamy.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
